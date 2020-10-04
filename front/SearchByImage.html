@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>TITLE</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+        <style>
+      .add{
+          margin-left: 10%;
+          margin-bottom: 5%
+          
+      }
+      .row{
+          height: 500px;
+      }
+      .setting{
+      }
+        </style>
+        <!-- EOF CSS INCLUDE -->
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+            
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="index.html">Oracle Go</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>                                                                      
+                    <li class="xn-title">Navigation</li>
+                    <li>
+                        <a href="insert.html"><span class="fa fa-desktop"></span> <span class="xn-text">Add image</span></a>
+                    </li>  
+                    <li>
+                        <a href="search.html"><span class="fa fa-desktop"></span> <span class="xn-text">search</span></a>
+                    </li>  
+                    <li>
+                        <a href="compare.html"><span class="fa fa-desktop"></span> <span class="xn-text">compare</span></a>
+                    </li>  
+                    <li>
+                        <a href="SearchByImage.html"><span class="fa fa-desktop"></span> <span class="xn-text">SearchByImage</span></a>
+                    </li>  
+                                                        
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->                    
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+                
+                <!-- START BREADCRUMB -->
+                <ul class="breadcrumb">
+                    <li><a href="#">Link</a></li>                    
+                    <li class="active">Active</li>
+                </ul>
+                <!-- END BREADCRUMB -->                
+                
+                <div class="page-title">                    
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Search By Image</h2>
+                </div>                   
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                
+                    <div class="row">
+            <div class="col-md-12">
+
+                    <div class="panel panel-default " style="height: 100%;">
+                        
+                            <div class="form-group">
+                                    
+                                    <div class="form-group">
+                                        <div class="col-md-5" style="margin-top: 1em; 
+                                        margin-left: 14%;">
+                                                <form id="my-awesome-dropzone" action="http://localhost:8080/SearchByimage/uploadPhoto" class="dropzone dropzone-mini dz-clickable"><div class="dz-default dz-message"><span>Drop files here to upload</span></div></form>
+                                        </div>
+                                        <div class="setting" style="margin-top: 10px;">
+                                                <div class="form-group"  >
+                                                        <div class="col-md-6" style="margin-top: 10px;">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">@</span>
+                                                                <input id="seuil" type="number" class="form-control" placeholder="seuil">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            <div class="checkbox col-md-5">
+                                                    <label>
+                                                        <input id="Color" type="checkbox" value="1">
+                                                        Color
+                                                    </label>
+                                                </div>
+                                            <div class="checkbox col-md-5">
+                                                    <label>
+                                                        <input id="Texture" type="checkbox" value="1">
+                                                        Texture                                                                    </label>
+                                                </div>
+                                            <div class="checkbox col-md-5">
+                                                    <label>
+                                                        <input id="Shape" type="checkbox" value="1">
+                                                        Shape                                                                    </label>
+                                                </div>
+                                         
+                                        </div>                                                        
+                                        <div class="col-md-6 add">
+                                                <button id="Compare" style="margin-top: 1em;"
+                                                    class="btn btn-primary btn-block center-block">Search</button>
+                                            </div> 
+                                            <div class="gallery" id="links">
+                             
+                                            
+                                                </div>
+                                    </div>
+  
+                                </div>
+
+                    
+                    </div>
+
+                </div>
+                   
+                        
+                    </div>
+                
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+
+             <!-- START PRELOADS -->
+             <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
+             <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+             <!-- END PRELOADS -->               
+             
+         <!-- START SCRIPTS -->
+             <!-- START PLUGINS -->
+             <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+             <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+             <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>                
+             <!-- END PLUGINS -->
+             
+             <!-- THIS PAGE PLUGINS -->    
+             <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+             <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+             <script type="text/javascript" src="js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+
+             <script type="text/javascript" src="js/plugins/dropzone/dropzone.min.js"></script>
+             <script type="text/javascript" src="js/plugins/fileinput/fileinput.min.js"></script>        
+             <script type="text/javascript" src="js/plugins/filetree/jqueryFileTree.js"></script>
+             <!-- END PAGE PLUGINS -->
+             
+             <!-- START TEMPLATE -->
+             <script type="text/javascript" src="js/settings.js"></script>
+             
+             <script type="text/javascript" src="js/plugins.js"></script>        
+             <script type="text/javascript" src="js/actions.js"></script>
+             <!-- END TEMPLATE -->
+             
+    <!-- END SCRIPTS -->    
+    <script>
+            $(document).ready(function()
+               {
+                Dropzone.options.myAwesomeDropzone = {
+                        acceptedFiles: ".png,.jpg,.gif,.bmp,.jpeg",
+                    };
+        
+                   $("#Compare").click(function(){
+
+                  
+                    var Color = $("#Color").is(":checked") ? 1 : 0;
+                    var Texture = $("#Texture").is(":checked")? 1 : 0;
+                    var Shape = $("#Shape").is(":checked")? 1 : 0;
+                    var seuil = $("#seuil").val();
+
+                    console.log(Color)
+              
+                       $.ajax({
+                           url: "http://localhost:8080/SearchByimage",
+                           type: "post",
+                           data : {
+                            color : Color,
+                            texture : Texture,
+                            shape : Shape,
+                            seuil : seuil,
+                           },
+                        success: function(result){
+                           console.log(result)
+                           $("#links").empty()
+
+                           jQuery.each( result, function( i, filename ) {
+                            $("#links").append("<a class='gallery-item' href='./Store/SearchByimage/"+filename+"' title='Nature Image 1' data-gallery><div class='image'><img src='./Store/SearchByimage/"+filename+"' alt='Nature Image 1'/><ul class='gallery-item-controls'><li><label class='check'><input type='checkbox' class='icheckbox'/></label></li><li><span class='gallery-item-remove'><i class='fa fa-times'></i></span></li></ul>  </div></a>");
+                                // Will stop running after "three"
+                            });     
+
+                       }});
+                       });
+               })
+            </script>     
+    </body>
+</html>
+
+
+
+
+
+
